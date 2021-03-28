@@ -10,7 +10,7 @@ class HumilityRules(object):
         logging.basicConfig(
                 format="{} - %(levelname)s - %(asctime)s - %(message)s".format(__name__),
         )
-        self.logger = logging.getLogger("humility")
+        self.logger = logging.getLogger(type(self).__name__)
         self.logger.setLevel("INFO")
         self.counter = 0
     @abstractmethod
