@@ -1,0 +1,46 @@
+- feature: age
+  rule: categorical
+  known_values:
+  - '[50-60)'
+  - '[20-30)'
+  - '[80-90)'
+  - '[70-80)'
+  - '[60-70)'
+  - '[30-40)'
+  - '[40-50)'
+  - '[10-20)'
+  - '[90-100)'
+  - '[0-10)'
+  action:
+    key: do nothing
+    value: null 
+- feature: race
+  rule: categorical  
+  known_values:
+    - Caucasian
+    - AfricanAmerican
+    - Hispanic
+    - Other
+    - Asian
+    - "?"
+  action:
+    key: do nothing
+    value: null 
+- feature: time_in_hospital
+  rule: outlying_input
+  bounds:
+    lower_bound: 1
+    upper_bound: 100
+  action:
+    key: override_prediction
+    value: 0.0
+- prediction_column: "True"
+  bounds:
+    lower_bound: 0.48
+    upper_bound: 0.52
+  rule: uncertain_prediction
+  action: 
+    key: override_prediction
+    value: 0.0
+
+
