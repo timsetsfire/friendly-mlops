@@ -1,0 +1,9 @@
+numpy==1.18
+PyYAML==5.3.1
+joblib==0.14.0
+pandas==0.25.1
+scipy==1.5.3
+scikit_learn==0.22.0
+catboost==0.24.2
+datarobot-drum
+xgboost==1.2.1
