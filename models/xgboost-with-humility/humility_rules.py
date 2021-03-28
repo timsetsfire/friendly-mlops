@@ -12,7 +12,6 @@ class HumilityRules(object):
         )
         self.logger = logging.getLogger("humility")
         self.logger.setLevel("INFO")
-        self.logger.addHandler(logging.StreamHandler())
         self.counter = 0
     @abstractmethod
     def humility(self, **kwargs):
