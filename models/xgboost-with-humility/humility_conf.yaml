@@ -32,8 +32,8 @@
     lower_bound: 1
     upper_bound: 100
   action:
-    key: override_prediction
-    value: 0.0
+    key: do nothing
+    value: null
 - prediction_column: "True"
   bounds:
     lower_bound: 0.48
